@@ -15,6 +15,7 @@ func spawn() -> void:
 	add_child(_fireball)
 	_fireball.explosion_container = explosion_container
 	_fireball.global_position = global_position
+	_fireball.connect("tree_exited", self, "set", ["_fireball", null])
 
 
 func throw() -> void:
